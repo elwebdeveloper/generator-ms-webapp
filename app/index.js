@@ -5,6 +5,18 @@ var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 
 var MsWebappGenerator = yeoman.generators.Base.extend({
+  constructor: function () {
+    yeoman.generators.Base.apply(this, arguments);
+
+    this.argument('app_name', { type: String, required: false });
+    this.appname = this.app_name || this.appname;
+    this.appname = this._.classify(this.appname);
+
+    this.config.defaults({
+      appName: this.appname
+    });
+  },
+
   initializing: function () {
     this.pkg = require('../package.json');
   },
@@ -33,8 +45,13 @@ var MsWebappGenerator = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
-      this.dest.mkdir('app');
-      this.dest.mkdir('app/templates');
+      this.dest.mkdir('web');
+      this.dest.mkdir('web/templates');
+      this.dest.mkdir('web/js');
+      this.dest.mkdir('web/css');
+      this.dest.mkdir('web/css/img');
+      this.dest.mkdir('web/images');
+      this.dest.mkdir('web/fonts');
 
       this.src.copy('_package.json', 'package.json');
       this.src.copy('_bower.json', 'bower.json');

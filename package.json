@@ -1,7 +1,7 @@
 {
   "name": "generator-ms-webapp",
-  "version": "0.0.0",
-  "description": "Yeoman generator",
+  "version": "0.0.1",
+  "description": "Scaffold out a front-end web app for M. Shanken Communications, Inc",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "elwebdeveloper/generator-ms-webapp",
@@ -20,7 +20,30 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "yeoman-generator",
+    "web",
+    "app",
+    "front-end",
+    "h5bp",
+    "modernizr",
+    "jquery",
+    "grunt",
+    "bower",
+    "backbone",
+    "marionette",
+    "karma",
+    "bootstrap",
+    "foundation",
+    "less",
+    "sass",
+    "requirejs"
+  ],
+  "maintainers": [
+    {
+      "name": "Edison . Leon",
+      "email": "eleon@mshanken.com"
+    }
   ],
   "dependencies": {
     "yeoman-generator": "^0.17.0",
